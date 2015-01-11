@@ -2,7 +2,7 @@
 
 This is just a proof of concept to get WatchKit on the simulator.
 
-To get this working, drag the ./Headers folder into /Applications/Xcode-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PepperUICore.framework
+To get this working, drag the `./Headers` folder into `/Applications/Xcode-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PepperUICore.framework`
 
 PepperUICore should be linked in the Target in the project.
 

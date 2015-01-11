@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "dlfcn.h"
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        dlopen("/System/Library/PrivateFrameworks/PepperUICore.framework", RTLD_LAZY);
+        Class PUICApplication = NSClassFromString(@"PUICApplication");
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([PUICApplication class]));
     }
 }

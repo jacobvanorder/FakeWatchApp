@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7657C4601A62C3BF00F199BD /* FakeApplication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7657C45F1A62C3BF00F199BD /* FakeApplication.xib */; };
+		7657C4621A6306DB00F199BD /* PepperUICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7657C4611A6306DB00F199BD /* PepperUICore.framework */; };
 		76A5D9CA1A61B4DE00115938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A5D9C91A61B4DE00115938 /* main.m */; };
 		76A5D9CD1A61B4DE00115938 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A5D9CC1A61B4DE00115938 /* AppDelegate.m */; };
 		76A5D9D01A61B4DE00115938 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A5D9CF1A61B4DE00115938 /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7657C45F1A62C3BF00F199BD /* FakeApplication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FakeApplication.xib; sourceTree = "<group>"; };
+		7657C4611A6306DB00F199BD /* PepperUICore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PepperUICore.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PepperUICore.framework; sourceTree = DEVELOPER_DIR; };
 		76A5D9C41A61B4DE00115938 /* FakeWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A5D9C81A61B4DE00115938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76A5D9C91A61B4DE00115938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7657C4621A6306DB00F199BD /* PepperUICore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 		76A5D9BB1A61B4DE00115938 = {
 			isa = PBXGroup;
 			children = (
+				7657C4611A6306DB00F199BD /* PepperUICore.framework */,
+				7657C45F1A62C3BF00F199BD /* FakeApplication.xib */,
 				76A5D9C61A61B4DE00115938 /* FakeWatchApp */,
 				76A5D9E01A61B4DE00115938 /* FakeWatchAppTests */,
 				76A5D9C51A61B4DE00115938 /* Products */,
@@ -168,6 +175,7 @@
 				TargetAttributes = {
 					76A5D9C31A61B4DE00115938 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 8X4DYCSP4Z;
 					};
 					76A5D9DC1A61B4DE00115938 = {
 						CreatedOnToolsVersion = 6.2;
@@ -202,6 +210,7 @@
 				76A5D9D31A61B4DE00115938 /* Main.storyboard in Resources */,
 				76A5D9D81A61B4DE00115938 /* LaunchScreen.xib in Resources */,
 				76A5D9D51A61B4DE00115938 /* Images.xcassets in Resources */,
+				7657C4601A62C3BF00F199BD /* FakeApplication.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +352,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = FakeWatchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +368,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks",
+				);
 				INFOPLIST_FILE = FakeWatchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -412,6 +433,7 @@
 				76A5D9E91A61B4DE00115938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76A5D9EA1A61B4DE00115938 /* Build configuration list for PBXNativeTarget "FakeWatchAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +442,7 @@
 				76A5D9EC1A61B4DE00115938 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
